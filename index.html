@@ -17,7 +17,138 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1>Landing</h1>
+  <!-- Open Tag Header -->
+  <header class="absolute w-full bg-[#272C49]">
+    <div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex justify-between items-center py-3.5">
+      <div class="shrink-0">
+        <img src="assets/icons/baby-care-logo.png" alt="Baby Care Logo" class="w-40 md:w-44 lg:w-48">
+      </div>
+
+      <!-- Desktop -->
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-x-10">
+          <li><a href="#" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+          <li><a href="#features" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+          <li><a href="articles.html" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+          <li><a href="#reviews" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+        </ul>
+      </nav>
+      <button class="hidden lg:flex justif-center items-center gap-x-2 bg-[#FFCB40] py-3 px-8 rounded-lg">
+        <span class="text-[#B05F00] font-semibold">Get Started</span>  
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 0L9.72023 0.00384421C4.32942 0.152163 0 4.57356 0 10C0 15.51 4.48 20 10 20C15.51 20 20 15.51 20 10C20 4.48 15.51 0 10 0ZM8.02 6C8.32 5.7 8.79 5.7 9.08 6L12.57 9.47C12.71 9.61 12.79 9.8 12.79 10C12.79 10.2 12.71 10.39 12.57 10.53L9.08 14C8.94 14.15 8.75 14.22 8.56 14.22C8.36 14.22 8.17 14.15 8.02 14C7.73 13.7 7.73 13.23 8.03 12.94L10.98 10L8.03 7.06C7.73 6.77 7.73 6.29 8.02 6Z" fill="#B05F00"/>
+        </svg>
+      </button>
+
+      <!-- Mobile -->
+      <div class="block lg:hidden" id="open_modal_btn">
+        <svg 
+          class="fill-white text-[26px] cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+        </svg>
+      </div>
+
+      <!-- Mobile Modal -->
+      <div class="mobile_modal translate-y-[100%] fixed top-0 left-0 w-full h-screen bg-[#272C49] px-4 flex justif-center items-center duration-500 ease-in-out">
+        <div class="w-full">
+          <nav>
+            <ul class="flex flex-col justif-center items-center gap-y-6">
+              <li><a href="#" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+              <li><a href="#features" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+              <li><a href="articles.html" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+              <li><a href="#reviews" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+              <span class="w-[120px] border-t-2 border-[#FFCB40]"></span>
+              <li><a href="signup.html" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Get Started</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="absolute top-6 right-6" id="close_modal_btn">
+          <svg
+            class="fill-white text-[26px] cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Close Tag Header -->
+
+  <!-- Open Tag Content -->
+  <section class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12">
+    <main class="flex flex-col lg:flex-row h-auto min-[400px]:h-screen pt-[120px] pb-[70px] lg:pt-[70px] lg:pb-[0px] gap-y-8">
+      <div class="lg:flex-1 flex flex-col justify-center items-start gap-y-1">
+        <div class="w-full">
+          <div class="text-center lg:text-start">
+            <span class="font-opensans text-[#272C49] font-extrabold text-[38px] lg:text-[42px] lh__1">
+              Monitoring Baby’s
+            </span>
+            <br>
+            <span class="inline-block font-opensans text-[#272C49] font-extrabold text-[38px] lg:text-[42px] -mt-1 ">
+              Nutrition using
+            </span>
+          </div>
+          <div class="text-center lg:text-start -mt-4">
+            <span class="font-aoboshi text-[#272C49] font-bold text-[38px] lg:text-[42px]">Baby</span>
+            <span class="font-aoboshi text-[#FFCB40] font-bold text-[38px] lg:text-[42px]">Care</span>
+          </div>
+        </div>
+        <p class="text-[#36455B] text-base lg:text-lg text-center lg:text-start w-full max-w-[500px] lg:w-auto mx-auto lg:mx-0">Bergabung bersama kami dan mulailah perjalanan menuju optimalisasi nutrisi & gizi anak</p>
+      </div>
+      <div class="lg:flex-1 flex justify-center items-center">
+        <img src="assets/images/mother-baby-circle.webp" alt="Mother & Baby" class="w-full max-w-[300px] lg:max-w-[500px] h-auto aspect-square object-contain rounded-full">
+      </div>
+    </main>
+  </section>
+  <!-- Close Tag Content -->
+
+  <!-- Open Tag Footer -->
+  <footer class="w-full bg-[#272C49]">
+    <div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex flex-col justify-between items-center py-10 lg:py-14 gap-y-10">
+      <div class="w-full flex flex-col gap-y-5">
+        <div class="order-1">
+          <img src="assets/icons/baby-care-logo.png" alt="Baby Care Logo" class="w-40 md:w-44 lg:w-48">
+        </div>
+        <div class="order-2 flex flex-col -mt-3">
+          <span class="text-sm lg:text-base text-white">Alamat: 123 Sprout Street, Nurtureville, Babyland, Nutritionia, 12345, NourishVille</span>
+          <span class="text-sm lg:text-base text-white">Nomor Telepon: (555) 123-4567</span>
+          <span class="text-sm lg:text-base text-white">Kode Pos: 67890</span>
+        </div>
+        <div class="order-4 lg:order-3 flex justif-start lg:justify-end items-center gap-x-6">
+          <a href="#">
+            <img src="assets/icons/facebook.png" alt="Facebook" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/instagram.png" alt="Instagram" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/twitter.png" alt="Twitter" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/youtube.png" alt="Youtube" class="w-[28px] lg:w-[35px]">
+          </a>
+        </div>
+        <nav class="order-3 lg:order-4">
+          <ul class="flex flex-col lg:flex-row items-start lg:items-center gap-y-3 gap-x-10">
+            <li><a href="#" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+            <li><a href="#features" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+            <li><a href="articles.html" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+            <li><a href="#reviews" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="w-full pt-4 border-t border-[#D1D9E2]">
+        <span class="text-[12px] lg:text-sm text-white">© Copyright 2023 • babycare.com</span>
+      </div>
+    </div>
+  </footer>
+  <!-- Close Tag Footer -->
 
   <script src="script.js"></script>
 </body>
