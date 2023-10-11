@@ -17,7 +17,55 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1>Signup</h1>
+  <div class="bg-[url('/assets/images/blue-background.webp')]  bg-no-repeat bg-center bg-cover 
+    w-full h-auto lg:h-screen flex justify-center items-center px-4 py-20">
+
+    <!--Content-->
+    <div class="flex flex-col lg:flex-row justify-center gap-x-10 gap-y-4 bg-white w-full max-w-[1064px] h-auto rounded-[24px] md:rounded-[40px] p-[24px] md:p-[32px] lg:p-[40px] select-none">
+      
+      <!--Left-->
+      <div class="order-2 lg:order-1 flex-1 flex flex-col justify-center items-start gap-y-[30px] self-stretch">
+        <div class="-ml-1">
+          <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans -mb-2 text-[#272C49]">Join Us  🙌</h1>
+          <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans text-[#272C49]">Fill out the forum</h1>
+        </div>
+
+        <form class="w-full flex flex-col gap-y-[20px]">
+          <input type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Username">
+          <input type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Masukkan Email Anda">
+          <input type="password" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Password">
+        </form>
+
+        <div class="w-full flex flex-col gap-y-[12px] mt-1">
+          <div class="flex justify-between">
+            <div class="flex gap-x-[10px] items-center">
+              <span class="text-[#474F7C] text-sm md:text-base ml-0.5">Saya Menerima
+                <a href="" class="font-semibold">Ketentuan </a> &
+                <a href="" class="font-semibold">Kebijakan Privasi </a>
+              </span>
+            </div>
+
+            <input type="checkbox" name="persetujuan" id="persetujuan" class="scale-[1.2] mr-0.5 cursor-pointer text-sm md:text-base">
+          </div>
+          <button class="bg-[#1E3465] text-white text-base font-semibold rounded-[12px] py-3">
+            Sign up
+          </button>
+          <div class="text-center mt-3">
+            <span class="text-[#474F7C] text-sm md:text-base">Sudah punya akun?
+              <a href="login.html" class="font-semibold">Klik disini</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!--Right-->
+      <div class="order-1 lg:order-2 w-full lg:w-auto flex-auto lg:flex-1 flex justify-start lg:justify-center items-center self-center">
+        <img src="assets/images/mother-baby.webp" class="aspect-square w-[360px] lg:w-full" alt="Mother and Baby">
+      </div>
+      
+    </div>
+  
+  </div>
 
   <script src="script.js"></script>
 </body>
