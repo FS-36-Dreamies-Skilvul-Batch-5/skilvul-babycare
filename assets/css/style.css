@@ -9,3 +9,21 @@
 .font-poppins{
   font-family: 'Poppins', sans-serif;
 }
+
+.font-aoboshi{
+  font-family: 'Aoboshi One', serif;
+}
+
+.lh__1{
+  line-height: 36px;
+}
+
+.lh__2{
+  line-height: 30px;
+}
+
+.scrollbar__hidden::-webkit-scrollbar{
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
