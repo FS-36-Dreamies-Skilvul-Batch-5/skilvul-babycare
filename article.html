@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register Success</title>
+  <title>Article</title>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
   <!-- Google Font -->
@@ -15,7 +15,7 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#F9FBFD]">
+<body class="bg-[#F9FBFD] overflow-x-hidden">
   <!-- Open Tag Header -->
   <header class="absolute w-full bg-[#272C49]">
     <div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex justify-between items-center py-3.5">
@@ -79,35 +79,34 @@
   <!-- Close Tag Header -->
 
   <!-- Open Tag Content -->
-  <section class="w-full max-w-[1280px] mx-auto px-[50px]">
-    <main class="flex flex-col h-auto min-[400px]:h-screen pt-[120px] pb-[70px]">
+  <section class="w-full mx-auto px-[50px]">
+    <main class="flex flex-col h-auto pt-[120px] pb-[70px]">
       <div class="w-full mt-5">
         <div class="text-start">
-          <h1 class="font-opensans text-[#272C49] font-extrabold text-[30px]">Article</h1>
-          <p class="text-[#36455B] text-sm">Bergabung bersama kami dan mulailah perjalanan menuju optimalisasi nutrisi & gizi anak</p>
+          <h1 class="font-opensans text-[32px] text-[#272C49] font-extrabold">Article</h1>
+          <p class="text-[#36455B]">Bergabung bersama kami dan mulailah perjalanan menuju optimalisasi nutrisi & gizi anak</p>
         </div>
       </div>
 
       <div class="flex flex-col mt-10 w-full">
-        <!-- search -->
-        <div class="justify-start">
+        <!-- search bar-->
+        <div class="flex">
           <div class="flex items-center w-[700px] h-8 rounded-[10px] shadow-[0_2px_4px_0_rgba(0,0,0,0.10)] bg-white overflow-hidden">
-              <div class="grid place-items-center h-full w-12 text-gray-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-              </div>
-      
-              <input
-              class="peer h-full w-full outline-none text-xs text-gray-400 pr-2"
-              type="text"
-              id="search"
-              placeholder="Search" /> 
+            <div class="grid place-items-center h-full w-12 text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input
+            class="peer h-full w-full outline-none text-xs text-gray-400 pr-2"
+            type="text"
+            id="search"
+            placeholder="Search" /> 
           </div>
         </div>
 
         <!-- dropdown -->
-        <div class="mt-5">
+        <div class="flex mt-5">
           <select id="kategori" name="kategori" class="w-[300px] h-8 rounded-[10px] border-none text-xs text-gray-400 px-2 px-3 py-0 shadow-[0_2px_4px_0_rgba(0,0,0,0.10)]">
             <option value="kategori" selected="">Kategori</option>
             <option value="tips">Tips</option>
@@ -117,80 +116,186 @@
         </div>
       </div>
 
+      <!-- article -->
       <div class="flex items-center justify-center mt-5">
-        <div class="grid grid-cols-3 grid-rows-3 gap-6">
+        <div class="grid grid-cols-3 grid-rows-2 gap-6">
           <!-- article 1 -->
-          <div class="flex flex-col w-full rounded-[12px] p-5 mb-4 shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
+          <div class="flex flex-col w-full rounded-xl p-5 mb-4 bg-white shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
             <div class="h-auto w-full">
-              <img src="assets/images/article-1.webp" class="object-cover rounded-[16px]" alt="article 1">
+              <img src="assets/images/article-1.webp" class="object-cover rounded-xl" alt="article 1">
             </div>
             <div class="flex flex-col items-start mt-4">
               <p class="text-sm text-[#898989]">2 September 2023</p>
-              <h4 class="text-lg text-[#272C49] font-bold text left">5 Kebiasaan Bayi Baru Lahir yang Harus Diketahui Orang Tua</h4>
-              <a class="p-2 leading-none rounded-[8px] mb-2 font-medium mt-3 bg-[#F8D16D] text-[#B05F00] text-xs" href="#">Tips</a>
+              <h1 class="font-opensans text-[22px] text-[#272C49] font-bold lh__2">5 Kebiasaan Bayi Baru Lahir yang Harus Diketahui</h1>
+              <a class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md mt-3 mb-4" href="#">Tips</a>
             </div>
           </div>
           <!-- article 2 -->
-          <div class="flex flex-col w-full rounded-[12px] p-5 mb-4 shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
+          <div class="flex flex-col w-full rounded-xl p-5 mb-4 bg-white shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
             <div class="h-auto w-full">
-              <img src="assets/images/article-2.webp" class="object-cover rounded-[16px]" alt="article 1">
+              <img src="assets/images/article-2.webp" class="object-cover rounded-xl" alt="article 2">
             </div>
             <div class="flex flex-col items-start mt-4">
               <p class="text-sm text-[#898989]">10 September 2023</p>
-              <h4 class="text-lg text-[#272C49] font-bold text left">Cara Merawat Bayi yang Baik dan Benar</h4>
-              <a class="p-2 leading-none rounded-[8px] mb-2 font-medium mt-3 bg-[#F8D16D] text-[#B05F00] text-xs" href="#">Tips</a>
+              <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold lh__2">Cara Merawat Bayi yang Baik dan Benar</h1>
+              <a class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md mt-3 mb-4" href="#">Tips</a>
             </div>
           </div>
           <!-- article 3 -->
-          <div class="flex flex-col w-full rounded-[12px] p-5 mb-4 shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
+          <div class="flex flex-col w-full rounded-xl p-5 mb-4 bg-white shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
             <div class="h-auto w-full">
-              <img src="assets/images/article-3.webp" class="object-cover rounded-[16px]" alt="article 1">
+              <img src="assets/images/article-3.webp" class="object-cover rounded-xl" alt="article 3">
             </div>
             <div class="flex flex-col items-start mt-4">
               <p class="text-sm text-[#898989]">22 September 2023</p>
-              <h4 class="text-lg text-[#272C49] font-bold text left">5 Kebiasaan Bayi Baru Lahir yang Harus Diketahui Orang Tua</h4>
-              <a class="p-2 leading-none rounded-[8px] mb-2 font-medium mt-3 bg-[#F8D16D] text-[#B05F00] text-xs" href="#">Stimulasi</a>
+              <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold lh__2">Stimulasi yang Tepat agar Bayi Cepat Duduk</h1>
+              <a class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md mt-3 mb-4" href="#">Stimulasi</a>
             </div>
           </div>
           <!-- article 4 -->
-          <div class="flex flex-col w-full rounded-[12px] p-5 mb-4 shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
+          <div class="flex flex-col w-full rounded-xl p-5 mb-4 bg-white shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
             <div class="h-auto w-full">
-              <img src="assets/images/article-4.webp" class="object-cover rounded-[16px]" alt="article 1">
+              <img src="assets/images/article-4.webp" class="object-cover rounded-xl" alt="article 4">
             </div>
             <div class="flex flex-col items-start mt-4">
               <p class="text-sm text-[#898989]">26 September 2023</p>
-              <h4 class="text-lg text-[#272C49] font-bold text left">5 Ide Stimulasi Sensori Latih Kemandirian</h4>
-              <a class="p-2 leading-none rounded-[8px] mb-2 font-medium mt-3 bg-[#F8D16D] text-[#B05F00] text-xs" href="#">Stimulasi</a>
+              <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold lh__2">5 Ide Stimulasi Sensori Latih Kemandirian</h1>
+              <a class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md mt-3 mb-4" href="#">Stimulasi</a>
             </div>
           </div>
           <!-- article 5 -->
-          <div class="flex flex-col w-full rounded-[12px] p-5 mb-4 shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
+          <div class="flex flex-col w-full rounded-xl p-5 mb-4 bg-white shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
             <div class="h-auto w-full">
-              <img src="assets/images/article-5.webp" class="object-cover rounded-[16px]" alt="article 1">
+              <img src="assets/images/article-5.webp" class="object-cover rounded-xl" alt="article 5">
             </div>
             <div class="flex flex-col items-start mt-4">
               <p class="text-sm text-[#898989]">30 September 2023</p>
-              <h4 class="text-lg text-[#272C49] font-bold text left">Anak Susah Makan, Ini Penyebab dan Tips Mengatasinya</h4>
-              <a class="p-2 leading-none rounded-[8px] mb-2 font-medium mt-3 bg-[#F8D16D] text-[#B05F00] text-xs" href="#">Nutrisi</a>
+              <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold lh__2">Anak Susah Makan, Ini Tips Mengatasinya</h1>
+              <a class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md mt-3 mb-4" href="#">Nutrisi</a>
             </div>
           </div>
           <!-- article 6 -->
-          <div class="flex flex-col w-full rounded-[12px] p-5 mb-4 shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
+          <div class="flex flex-col w-full rounded-xl p-5 mb-4 bg-white shadow-[2px_4px_10px_0_rgba(0,0,0,0.10)]">
             <div class="h-auto w-full">
-              <img src="assets/images/article-6.webp" class="object-cover rounded-[16px]" alt="article 1">
+              <img src="assets/images/article-6.webp" class="object-cover rounded-xl" alt="article 6">
             </div>
             <div class="flex flex-col items-start mt-4">
               <p class="text-sm text-[#898989]">1 Oktober 2023</p>
-              <h4 class="text-lg text-[#272C49] font-bold text left">Kenapa Orang Tua Perlu Selektif Memilih Bath Toys</h4>
-              <a class="p-2 leading-none rounded-[8px] mb-2 font-medium mt-3 bg-[#F8D16D] text-[#B05F00] text-xs" href="#">Tips</a>
+              <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold lh__2">Kenapa Orang Tua Perlu Selektif Memilih Bath Toys</h1>
+              <a class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md mt-3 mb-4" href="#">Tips</a>
             </div>
           </div>
         </div>
     </div>
 
-
+    <!-- pagination -->
+    <div class="flex items-center justify-center mt-8 mb-10">
+      <ul class="flex items-center space-x-2 font-light">
+        <li class="border-2 border-[#1E3465] rounded-full text-[#1E3465] bg-white">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="border-2 border-[#1E3465] rounded-full font-medium text-xl text-[#1E3465] bg-white">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">1</a>
+        </li>
+        <li
+          class="border-2 border-[#1E3465] rounded-full font-medium text-xl text-[#1E3465] bg-white">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">2</a>
+        </li>
+        <li class="border-2 border-[#1E3465] rounded-full font-medium text-xl text-white bg-[#1E3465]">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">3</a>
+        </li>
+        <li
+          class="border-2 border-[#1E3465] rounded-full font-medium text-xl text-[#1E3465] bg-white">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">4</a>
+        </li>
+        <li
+          class="border-2 border-[#1E3465] rounded-full font-medium text-xl text-[#1E3465] bg-white">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">5</a>
+        </li>
+        <li
+          class="border-2 border-[#1E3465] rounded-full font-medium text-xl text-[#1E3465] bg-white">
+          <a href="#" class="w-8 h-8 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     </main>
   </section>
+  <!-- Close Tag Content -->
+
+  <!-- Open Tag Footer -->
+  <footer class="w-full bg-[#272C49]">
+    <div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex flex-col justify-between items-center py-10 lg:py-14 gap-y-10">
+      <div class="w-full flex flex-col gap-y-5">
+        <div class="order-1">
+          <img src="assets/icons/baby-care-logo.png" alt="Baby Care Logo" class="w-40 md:w-44 lg:w-48">
+        </div>
+        <div class="order-2 flex flex-col -mt-3">
+          <span class="text-sm lg:text-base text-white">Alamat: 123 Sprout Street, Nurtureville, Babyland, Nutritionia, 12345, NourishVille</span>
+          <span class="text-sm lg:text-base text-white">Nomor Telepon: (555) 123-4567</span>
+          <span class="text-sm lg:text-base text-white">Kode Pos: 67890</span>
+        </div>
+        <div class="order-4 lg:order-3 flex justify-start lg:justify-end items-center gap-x-6">
+          <a href="#">
+            <img src="assets/icons/facebook.png" alt="Facebook" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/instagram.png" alt="Instagram" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/twitter.png" alt="Twitter" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/youtube.png" alt="Youtube" class="w-[28px] lg:w-[35px]">
+          </a>
+        </div>
+        <nav class="order-3 lg:order-4">
+          <ul class="flex flex-col lg:flex-row items-start lg:items-center gap-y-3 gap-x-10">
+            <li><a href="#" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+            <li><a href="#features" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+            <li><a href="articles.html" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+            <li><a href="#reviews" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="w-full pt-4 border-t border-[#D1D9E2]">
+        <span class="text-[12px] lg:text-sm text-white">© Copyright 2023 • babycare.com</span>
+      </div>
+    </div>
+  </footer>
+  <!-- Close Tag Footer -->
+
   <script src="script.js"></script>
 </body>
 </html>
