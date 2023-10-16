@@ -164,6 +164,7 @@
         </button>
       </aside>
       <!-- end::Aside -->
+
       <div class="flex flex-col w-full h-screen px-[36px] gap-x-20">
         <div class="py-[40px] flex flex-col w-full">
           <div class="flex flex-col text-start mb-2">
@@ -176,9 +177,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col w-full gap-y-[30px]">
+        <div class="flex flex-col w-full gap-y-5">
           <!-- search -->
-          <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+          <div class="grid md:grid-cols-3 gap-5 md:gap-7">
             <div
               class="md:col-span-2 flex items-center w-full px-4 py-3.5 rounded-xl border-[1px] border-solid border-[#D1D9E2] bg-white overflow-hidden gap-x-2"
             >
@@ -211,7 +212,7 @@
                 name="kategori"
                 class="w-full rounded-xl text-sm text-gray-400 px-4 py-3.5 border-[1px] border-solid border-[#D1D9E2] focus:outline-none appearance-none"
               >
-                <option value="kategori" class="text-sm" selected>Kategori</option>
+                <option value="semua" class="text-sm" selected>Semua</option>
                 <option value="tips" class="text-sm">Tips</option>
                 <option value="stimulasi" class="text-sm">Stimulasi</option>
                 <option value="nutrisi" class="text-sm">Nutrisi</option>
@@ -228,122 +229,122 @@
           </div>
 
           <!-- vaksin content -->
-          <div class="flex ">
+          <div class="flex items-center justify-center">
             <div class="flex flex-col w-full gap-y-5">
               <!-- vaksin 1 -->
               <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
-              <div class="flex items-center w-full gap-x-8">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#6BD147"/>
-                </svg>
+                <div class="flex items-center w-full gap-x-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#6BD147"/>
+                  </svg>
                 <div class="">
                   <h1 class="font-poppins text-[22px] text-[#36455B] font-bold">Hepatitis B 1</h1>
                   <p class="text-[#36455B] text-[18px]">Jadwal vaksin pada umur Saat Lahir</p>
                 </div>
+                </div>
+                <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  height="1em" 
+                  viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                  </svg>
+                </a>              
               </div>
-              <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                height="1em" 
-                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-              </svg>
-              </a>              
-            </div>
-            <!-- vaksin 2 -->
-            <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
-              <div class="flex items-center w-full gap-x-8">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
-                </svg>
+              <!-- vaksin 2 -->
+              <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
+                <div class="flex items-center w-full gap-x-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
+                  </svg>
                 <div class="">
                   <h1 class="font-poppins text-[22px] text-[#36455B] font-bold">Polio 0</h1>
                   <p class="text-[#36455B] text-[18px]">Jadwal vaksin pada umur Saat Lahir</p>
                 </div>
+                </div>
+                <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  height="1em" 
+                  viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                  </svg>
+                </a>              
               </div>
-              <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                height="1em" 
-                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-              </svg>
-              </a>              
-            </div>
-            <!-- vaksin 3 -->
-            <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
-              <div class="flex items-center w-full gap-x-8">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
-                </svg>
+              <!-- vaksin 3 -->
+              <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
+                <div class="flex items-center w-full gap-x-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
+                  </svg>
                 <div class="">
                   <h1 class="font-poppins text-[22px] text-[#36455B] font-bold">BCG</h1>
                   <p class="text-[#36455B] text-[18px]">Jadwal vaksin pada umur Saat Lahir</p>
                 </div>
+                </div>
+                <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  height="1em" 
+                  viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                  </svg>
+                </a>              
               </div>
-              <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                height="1em" 
-                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-              </svg>
-              </a>              
-            </div>
-            <!-- vaksin 4 -->
-            <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
-              <div class="flex items-center w-full gap-x-8">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
-                </svg>
+              <!-- vaksin 4 -->
+              <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
+                <div class="flex items-center w-full gap-x-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
+                  </svg>
                 <div class="">
                   <h1 class="font-poppins text-[22px] text-[#36455B] font-bold">Hepatitis B 2</h1>
                   <p class="text-[#36455B] text-[18px]">Jadwal vaksin pada umur 59 Hari</p>
                 </div>
+                </div>
+                <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  height="1em" 
+                  viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                  </svg>
+                </a>              
               </div>
-              <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                height="1em" 
-                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-              </svg>
-              </a>              
-            </div>
-            <!-- vaksin 5 -->
-            <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
-              <div class="flex items-center w-full gap-x-8">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
-                </svg>
+              <!-- vaksin 5 -->
+              <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
+                <div class="flex items-center w-full gap-x-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
+                  </svg>
                 <div class="">
                   <h1 class="font-poppins text-[22px] text-[#36455B] font-bold">Polio 1</h1>
                   <p class="text-[#36455B] text-[18px]">Jadwal vaksin pada umur 59 Hari</p>
                 </div>
-              </div>
-              <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                height="1em" 
-                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-              </svg>
-              </a>              
-            </div>
-            <!-- vaksin 6 -->
-            <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
-              <div class="flex items-center w-full gap-x-8">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
+                </div>
+                <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  height="1em" 
+                  viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
                 </svg>
+                </a>              
+              </div>
+              <!-- vaksin 6 -->
+              <div class="flex rounded-xl h-auto justify-center items-center p-6 bg-white border-[1px] border-solid border-[#D1D9E2]">
+                <div class="flex items-center w-full gap-x-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M28.68 0C35.46 0 40 4.76 40 11.84V28.182C40 35.24 35.46 40 28.68 40H11.34C4.56 40 0 35.24 0 28.182V11.84C0 4.76 4.56 0 11.34 0H28.68ZM28.36 14C27.68 13.32 26.56 13.32 25.88 14L17.62 22.26L14.12 18.76C13.44 18.08 12.32 18.08 11.64 18.76C10.96 19.44 10.96 20.54 11.64 21.24L16.4 25.98C16.74 26.32 17.18 26.48 17.62 26.48C18.08 26.48 18.52 26.32 18.86 25.98L28.36 16.48C29.04 15.8 29.04 14.7 28.36 14Z" fill="#D1D9E2"/>
+                  </svg>
                 <div class="">
                   <h1 class="font-poppins text-[22px] text-[#36455B] font-bold">DTP 1</h1>
                   <p class="text-[#36455B] text-[18px]">Jadwal vaksin pada umur 59 Hari</p>
                 </div>
+                </div>
+                <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  height="1em" 
+                  viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                  </svg>
+                </a>              
               </div>
-              <a href="#" class="w-[40px] h-[40px] flex items-center py-[5px] justify-center rounded-[10px] font-medium text-lg fill-[#7C8B9D] bg-[#E6E9EC]">
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                height="1em" 
-                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
-              </svg>
-              </a>              
-            </div>
             </div>
           </div>
         </div>    
