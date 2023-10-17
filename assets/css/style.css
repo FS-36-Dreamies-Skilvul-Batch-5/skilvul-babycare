@@ -14,6 +14,10 @@
   font-family: 'Aoboshi One', serif;
 }
 
+.lh__0{
+  line-height: 42px;
+}
+
 .lh__1{
   line-height: 36px;
 }
@@ -26,4 +30,16 @@
   display: none;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none; 
+}
+
+.welcome__text{
+  text-shadow:
+  -2.6px -2.6px 0 #C38305,
+   0   -2.6px 0 #C38305,
+   2.6px -2.6px 0 #C38305,
+   2.6px  0   0 #C38305,
+   2.6px  2.6px 0 #C38305,
+   0    2.6px 0 #C38305,
+  -2.6px  2.6px 0 #C38305,
+  -2.6px  0   0 #C38305;
 }
