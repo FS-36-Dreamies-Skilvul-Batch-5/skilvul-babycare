@@ -27,9 +27,11 @@ function setLocalStorage(formData){
   localStorage.setItem('isRememberUser', rememberMe);
 }
 
-const loginBtn = document.getElementById('login_btn');
+const loginForm = document.getElementById('login_form');
 
-loginBtn.addEventListener('click', async function(){
+loginForm.addEventListener('submit', async function(e){
+  e.preventDefault()
+  
   // Mendapatkan userinput
   const loginData = getFormData();
 
