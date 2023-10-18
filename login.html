@@ -35,11 +35,13 @@
         <div class="-ml-1">
           <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans -mb-2">Hello 👋</h1>
           <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans">Welcome Back!</h1>
+
+          <span id="error_msg" class="hidden absolute text-red-500 text-sm ml-1">Username atau Password salah!</span>
         </div>
 
         <form class="w-full flex flex-col gap-y-[20px]">
-          <input type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Username or email">
-          <input type="password" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Password">
+          <input id="username_field" type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Username or email" name="username">
+          <input id="password_field" type="password" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" name="password" placeholder="Password">
         </form>
 
         <div class="w-full flex flex-col gap-y-[12px] mt-1">
@@ -50,7 +52,7 @@
             </div>
             <a href="#" class="text-[#474F7C] text-sm md:text-base">Lupa kata sandi?</a>
           </div>
-          <button class="bg-[#1E3465] text-white text-base font-semibold rounded-md py-3">
+          <button id="login_btn" class="bg-[#1E3465] text-white text-base font-semibold rounded-md py-3">
             Login
           </button>
           <div class="text-center mt-3">
@@ -63,6 +65,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./assets/js/login.js"></script>
 </body>
 </html>
