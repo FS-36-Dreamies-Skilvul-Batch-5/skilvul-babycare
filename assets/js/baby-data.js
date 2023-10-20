@@ -1,24 +1,4 @@
-async function getIdFromUsernameLocalStorage() {
-  const usernameFromLS = localStorage.getItem("username");
-
-  try {
-    const response = await fetch(
-      `https://6525fe0567cfb1e59ce7cc6a.mockapi.io/api/users`, {
-        method: "GET",
-        headers: {
-          "content-type": "application/json"
-        },
-      }
-    );
-
-    const data = await response.json();
-    const user = data.find((user) => user.username == usernameFromLS);
-
-    return user.id;
-  } catch (err) {
-    console.log(err);
-  }
-}
+const userId = localStorage.getItem('id');
 
 async function getBabyDataFromUserId(userId) {
   try {
@@ -43,7 +23,7 @@ const fetchInfoElement = document.getElementById("fetch_info");
 fetchInfoElement.classList.toggle("hidden");
 
 async function loadBabyData() {
-  const userId = await getIdFromUsernameLocalStorage();
+  // const userId = await getIdFromUsernameLocalStorage();
   const babyDataListElement = document.getElementById("baby_data_list");
 
   try {
@@ -199,7 +179,6 @@ function addBabyData() {
       tinggi,
       lingkarKepala
     } = getData();
-    const userId = await getIdFromUsernameLocalStorage();
 
     const newBabyData = {
       userId: userId,
@@ -271,8 +250,6 @@ function editBabyData(id) {
   });
 
   async function putData(id) {
-    const userId = await getIdFromUsernameLocalStorage();
-
     try {
       const response = await fetch(
         `https://6525fe0567cfb1e59ce7cc6a.mockapi.io/api/users/${userId}/babydatas/${id}`, {
@@ -326,7 +303,6 @@ function editBabyData(id) {
       tinggi,
       lingkarKepala
     } = getEditData();
-    const userId = await getIdFromUsernameLocalStorage();
 
     const newBabyData = {
       userId: userId,
@@ -361,8 +337,6 @@ async function deleteBabyData(id) {
 
   if (isConfirmed) {
     try {
-      const userId = await getIdFromUsernameLocalStorage();
-
       const response = await fetch(
         `https://6525fe0567cfb1e59ce7cc6a.mockapi.io/api/users/${userId}/babydatas/${id}`, {
           method: "DELETE",
