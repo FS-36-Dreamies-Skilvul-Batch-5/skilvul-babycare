@@ -380,8 +380,8 @@
           <h1 class="font-opensans text-[28px] min-[840px]:text-[32px] text-[#272C49] font-extrabold">
             Grafik Pertumbuhan
           </h1>
-          <p class="text-[#898989] text-sm min-[840px]:text-base">
-            Terakhir diupdate 17 Juli 2023
+          <p id="last_updated_el" class="text-[#898989] text-sm min-[840px]:text-base">
+            -
           </p>
         </div>
 
@@ -390,7 +390,7 @@
           class="flex flex-col min-[840px]:flex-row flex-between gap-x-[25px] gap-y-[20px]"
         >
           <!-- Berat (Active) -->
-          <a href="" class="w-full block">
+          <button class="chart__choices active w-full block" data-chart="berat_badan">
             <div
               class="flex flex-col w-full bg-[#DFF1FF] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
             >
@@ -404,17 +404,17 @@
                 <div
                   class="w-full flex justify-center items-end gap-1 text-[#54ABF0]"
                 >
-                  <h1 class="berat__badan text-2xl font-bold">2.7</h1>
+                  <h1 class="berat__badan text-2xl font-bold">-</h1>
                   <span class="text-lg">kg</span>
                 </div>
               </div>
             </div>
-          </a>
+          </button>
 
           <!-- Berat (Re-Active) -->
-          <!-- <a href="" class="w-full block">
+          <!-- <button class="chart__choices active w-full block">
             <div
-              class="flex flex-col w-full bg-[#DFF1FF] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
+              class="flex flex-col w-full bg-[#F5F5F5] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
             >
               <img
                 src="../assets/icons/berat-badan-grey.png"
@@ -424,17 +424,17 @@
               <div class="flex flex-col justify-center text-center">
                 <span>Berat</span>
                 <div
-                  class="w-full flex justify-center items-end gap-1 text-[#54ABF0]"
+                  class="w-full flex justify-center items-end gap-1 text-[#898989]"
                 >
                   <h1 class="berat__badan text-2xl font-bold">2.7</h1>
                   <span class="text-lg">kg</span>
                 </div>
               </div>
             </div>
-          </a> -->
+          </button> -->
 
           <!-- Tinggi (Active) -->
-          <!-- <a href="" class="w-full block">
+          <button class="chart__choices w-full block" data-chart="tinggi_badan">
             <div
               class="flex flex-col w-full bg-[#FFF6DF] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
             >
@@ -448,15 +448,15 @@
                 <div
                   class="w-full flex justify-center items-end gap-1 text-[#F5C952]"
                 >
-                  <h1 class="tinggi__badan text-2xl font-bold">71</h1>
+                  <h1 class="tinggi__badan text-2xl font-bold">-</h1>
                   <span class="text-lg">cm</span>
                 </div>
               </div>
             </div>
-          </a> -->
+          </button>
 
           <!-- Tinggi (Re-Active) -->
-          <a href="" class="w-full block">
+          <!-- <a href="baby-chart.html?chart=tinggi" class="chart__choices w-full block">
             <div
               class="flex flex-col w-full bg-[#F5F5F5] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
             >
@@ -475,10 +475,10 @@
                 </div>
               </div>
             </div>
-          </a>
+          </a> -->
 
           <!-- L. Kepala (Active) -->
-          <!-- <a href="" class="w-full block">
+          <button class="chart__choices active w-full block" data-chart="lingkar_kepala">
             <div
               class="flex flex-col w-full bg-[#E3FFDA] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
             >
@@ -492,15 +492,15 @@
                 <div
                   class="w-full flex justify-center items-end gap-1 text-[#6BD147]"
                 >
-                  <h1 class="lingkar_kepala text-2xl font-bold">46</h1>
+                  <h1 class="lingkar__kepala text-2xl font-bold">-</h1>
                   <span class="text-lg">cm</span>
                 </div>
               </div>
             </div>
-          </a> -->
+          </button>
 
           <!-- L. Kepala (Active) -->
-          <a href="" class="w-full block">
+          <!-- <a href="baby-chart.html?chart=lingkar_kepala" class="chart__choices w-full block">
             <div
               class="flex flex-col w-full bg-[#F5F5F5] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]"
             >
@@ -519,7 +519,7 @@
                 </div>
               </div>
             </div>
-          </a>
+          </a> -->
         </div>
         <!-- end::Parameter  Pertumbuhan -->
 
@@ -528,25 +528,25 @@
           class="w-full rounded-md outline outline-2 outline-[#D1D9E2] p-[15px] mt-3"
         >
           <div class="flex flex-col gap-y-6">
-            <!-- title -->
             <div class="grid md:grid-cols-3 gap-y-3">
               <div
                 class="md:col-span-2 flex items-center w-full overflow-hidden"
               >
                 <div class="flex flex-col overflow-hidden gap-x-2">
                   <h1
+                    id="chart_pilihan"
                     class="font-opensans text-base lg:text-lg text-[#272C49] font-extrabold"
                   >
-                    Berat Badan Sesuai Usia
+                    Semua Chart
                   </h1>
-                  <p class="text-[#898989] text-xs lg:text-sm">
+                  <!-- <p class="text-[#898989] text-xs lg:text-sm">
                     0 tahun 6 bulan 12 hari
-                  </p>
+                  </p> -->
                 </div>
               </div>
 
               <!-- dropdown -->
-              <div class="relative w-full">
+              <!-- <div class="relative w-full">
                 <select
                   id="kategori"
                   name="kategori"
@@ -568,16 +568,21 @@
                     class="fill-gray-400 h-[0.9em]"
                     viewBox="0 0 448 512"
                   >
-                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
                       d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
                     />
                   </svg>
                 </div>
-              </div>
+              </div> -->
             </div>
 
-            <div class="w-full">
+            <div id="chart" class="w-full">
+              <canvas id="weight_chart" class="w-full"></canvas>
+              <canvas id="height_chart" class="w-full"></canvas>
+              <canvas id="headc_chart" class="w-full"></canvas>
+            </div>
+
+            <!-- <div class="w-full">
               <p class="text-xs pt-2">Berat (kg)</p>
               <img
                 src="../assets/icons/Chart.png"
@@ -585,7 +590,7 @@
                 class="w-full max-h-full h-[360px] object-cover"
               />
               <p class="flex justify-end text-xs">Usia (bulan)</p>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- end::Chart -->
@@ -593,8 +598,13 @@
     </div>
     <!-- end::Content -->
 
+    <script src="../assets/js/baby-chart.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/auth-check.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+    </script>
   </body>
 </html>

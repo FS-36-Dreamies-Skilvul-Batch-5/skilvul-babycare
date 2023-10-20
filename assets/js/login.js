@@ -28,14 +28,14 @@ async function getUsers(){
 }
 
 function setLocalStorage(userData){
-  const { id, name, username, password, baby_name, baby_birth, gender } = userData;
+  const { id, name, username, password, baby_name, birth_date, gender } = userData;
 
   localStorage.setItem('id', id);
   localStorage.setItem('name', name);
   localStorage.setItem('username', username);
   localStorage.setItem('password', password);
   localStorage.setItem('baby_name', baby_name);
-  localStorage.setItem('baby_birth', baby_birth);
+  localStorage.setItem('baby_birth', birth_date);
   localStorage.setItem('gender', gender);
 }
 
