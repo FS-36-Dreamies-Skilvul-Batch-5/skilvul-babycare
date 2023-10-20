@@ -21,21 +21,42 @@
     w-full h-auto lg:h-screen flex justify-center items-center px-4 py-20">
 
     <!--Content-->
-    <form id="signup_form" class="flex flex-col lg:flex-row justify-center gap-x-10 gap-y-4 bg-white w-full max-w-[1064px] h-auto rounded-[24px] md:rounded-[40px] p-[24px] md:p-[32px] lg:p-[40px] select-none">
+    <form id="signup_form" class="flex flex-col lg:flex-row justify-center gap-x-10 gap-y-4 bg-white w-full max-w-[1064px] h-auto rounded-[24px] md:rounded-[40px] py-[20px] md:py-[24px] lg:py-[32px] px-[24px] md:px-[32px] lg:px-[40px] select-none">
       
       <!--Left-->
       <div class="order-2 lg:order-1 flex-1 flex flex-col justify-center items-start gap-y-[30px] self-stretch">
         <div class="-ml-1">
           <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans -mb-2 text-[#272C49]">Join Us  🙌</h1>
-          <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans text-[#272C49]">Fill out the forum</h1>
         
           <span id="warning_msg" class="hidden absolute text-red-500 text-sm ml-1">Terima ketentuan & kebijakan privasi!</span>
         </div>
 
         <div class="w-full flex flex-col gap-y-[20px]">
-          <input id="username_field" type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Username" pattern="[a-z]+" required>
-          <input id="email_field" type="email" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Masukkan Email Anda" required>
-          <input id="password_field" type="password" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Password" required>
+          <div>
+            <label class="font-medium text-[#474F7C] text-sm md:text-base">Akun</label>
+            <div class="flex flex-col gap-y-[10px]">
+              <div class="flex flex-col min-[840px]:flex-row gap-y-2 gap-x-8">
+                <input id="name_field" type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Masukkan Nama Anda" required>
+                <input id="username_field" type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Masukkan Username Anda" pattern="[a-z]+" required>
+              </div>
+              <div class="flex flex-col min-[840px]:flex-row gap-y-2 gap-x-8">
+                <input id="email_field" type="email" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Masukkan Email Anda" required>
+                <input id="password_field" type="password" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Password" required>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="font-medium text-[#474F7C] text-sm md:text-base">Data Bayi</label>
+            <div class="flex flex-col min-[840px]:flex-row gap-y-2 gap-x-8">
+              <input id="baby_name_field" type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" placeholder="Masukkan Nama Bayi Anda" required>
+              <input id="baby_birth_field" type="date" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" required>
+              <select name="gender" id="baby_gender_select" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" required>
+                <option value="" selected>Baby Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div class="w-full flex flex-col gap-y-[12px] mt-1">
@@ -59,12 +80,6 @@
           </div>
         </div>
       </div>
-
-      <!--Right-->
-      <div class="order-1 lg:order-2 w-full lg:w-auto flex-auto lg:flex-1 flex justify-start lg:justify-center items-center self-center">
-        <img src="assets/images/mother-baby.webp" class="aspect-square w-[360px] lg:w-full" alt="Mother and Baby">
-      </div>
-      
     </form>
   
   </div>
