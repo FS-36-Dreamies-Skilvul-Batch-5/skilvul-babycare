@@ -363,7 +363,7 @@
                   <h1 class="font-extrabold text-[36px] text-[#F8D16D] welcome__text lh__0">Welcome Back!</h1>
                   <p class="text-white">
                     Hello
-                    <span class="font-bold">Miku's</span>
+                    <span id="baby_name" class="font-bold"></span>
                     Parent 👋
                   </p>
                 </div>
@@ -371,7 +371,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
                     <path d="M3 1.5V2.5H1.5C0.671875 2.5 0 3.17187 0 4V5.5H14V4C14 3.17187 13.3281 2.5 12.5 2.5H11V1.5C11 0.946875 10.5531 0.5 10 0.5C9.44688 0.5 9 0.946875 9 1.5V2.5H5V1.5C5 0.946875 4.55313 0.5 4 0.5C3.44688 0.5 3 0.946875 3 1.5ZM14 6.5H0V15C0 15.8281 0.671875 16.5 1.5 16.5H12.5C13.3281 16.5 14 15.8281 14 15V6.5Z" fill="white"/>
                   </svg>
-                  <p class="text-white text-sm mt-0.5">Jumat, 18 Juli 2023</p>
+                  <p id="date_el" class="text-white text-sm mt-0.5"></p>
                 </div>
               </div>
               <div class="flex-1 flex justify-center items-center">
@@ -395,44 +395,44 @@
           <div class="flex flex-col gap-y-3">
             <div class="flex flex-col min-[840px]:flex-row justify-between items-start min-[840px]:items-center">
               <h3 class="font-bold text-[#272C49]">Dashboard</h3>
-              <span class="text-xs text-[#898989]">terakhir di update 17 Juli 2023 </span>
+              <span id="last_updated_el" class="text-xs text-[#898989]">-</span>
             </div>
   
             <div class="flex flex-col min-[840px]:flex-row flex-between gap-x-[25px] gap-y-[20px]">
               <!-- Berat (Active) -->
-              <a href="" class="w-full block">
+              <a href="baby-chart.html?chart=berat" class="w-full block">
                 <div class="flex flex-col w-full bg-[#DFF1FF] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]">
                   <img src="../assets/icons/berat-badan.png" alt="Berat Badan" class="h-[40px] object-contain">
                   <div class="flex flex-col justify-center text-center">
                     <span>Berat</span>
                     <div class="w-full flex justify-center items-end gap-1 text-[#54ABF0]">
-                      <h1 class="berat__badan text-2xl font-bold">2.7</h1>
+                      <h1 class="berat__badan text-2xl font-bold">-</h1>
                       <span class="text-lg">kg</span>
                     </div>
                   </div>
                 </div>
               </a>
               <!-- Tinggi (Active) -->
-              <a href="" class="w-full block">
+              <a href="baby-chart.html?chart=tinggi" class="w-full block">
                 <div class="flex flex-col w-full bg-[#FFF6DF] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]">
                   <img src="../assets/icons/tinggi-badan.png" alt="Tinggi Badan" class="h-[40px] object-contain">
                   <div class="flex flex-col justify-center text-center">
                     <span>Tinggi</span>
                     <div class="w-full flex justify-center items-end gap-1 text-[#F5C952]">
-                      <h1 class="tinggi__badan text-2xl font-bold">71</h1>
+                      <h1 class="tinggi__badan text-2xl font-bold">-</h1>
                       <span class="text-lg">cm</span>
                     </div>
                   </div>
                 </div>
               </a>
               <!-- L. Kepala (Active) -->
-              <a href="" class="w-full block">
+              <a href="baby-chart.html?chart=lingkar_kepala" class="w-full block">
                 <div class="flex flex-col w-full bg-[#E3FFDA] p-[32px] rounded-2xl gap-y-3 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]">
                   <img src="../assets/icons/lingkar-kepala.png" alt="Lingkar Kepala" class="h-[40px] object-contain">
                   <div class="flex flex-col justify-center text-center">
                     <span>L. Kepala</span>
                     <div class="w-full flex justify-center items-end gap-1 text-[#6BD147]">
-                      <h1 class="lingkar_kepala text-2xl font-bold">46</h1>
+                      <h1 class="lingkar__kepala text-2xl font-bold">-</h1>
                       <span class="text-lg">cm</span>
                     </div>
                   </div>
@@ -482,12 +482,12 @@
           <div class="flex items-center gap-x-3">
             <img src="../assets/images/users/brenda-s.png" alt="User's Profile Picture" class="w-[50px] h-[50px] shrink-0 rounded-full">
             <div>
-              <h1 class="font-semibold text-[#272C49] text-lg">Brianna Smith</h1>
-              <div class="flex gap-x-1 -mt-[1px]">
+              <h1 id="user_full_name" class="font-semibold text-[#272C49] text-lg"></h1>
+              <!-- <div class="flex gap-x-1 -mt-[1px]">
                 <span class="text-xs text-[#898989]">bergabung</span>
                 <span class="text-xs text-[#898989]">-</span>
                 <span class="text-xs text-[#898989]">yang lalu</span>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -495,18 +495,19 @@
             <h3 class="font-bold text-[#272C49]">Kebutuhan Harian</h3>
   
             <div class="flex flex-col w-full bg-[#272C49] justify-center items-center text-center p-[26px] rounded-[16px] gap-y-2 shadow-[0_2px_4px_0px_rgba(0,0,0,0.10)]">
-              <div class="w-[40px] h-[40px] bg-[#6BD147] flex justify-center items-center rounded-xl">
-                <span class="font-bold text-white text-xl">-</span>
+              <div id="nutrition_bg" class="w-[40px] h-[40px] flex justify-center items-center rounded-xl">
+                <span id="nutrition_icon" class="font-bold text-white text-xl">
+                  -
+                </span>
               </div>
               <div class="flex gap-x-1">
-                <span class="text-white text-2xl font-bold">Gizi</span>
-                <span class="text-white text-2xl font-bold">Baik</span>
+                <span id="nutrition_conclusion" class="text-white text-2xl font-bold">-</span>
               </div>
               <div class="w-full flex justify-center items-center gap-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                   <path d="M6.5 0.5C8.0913 0.5 9.61742 1.13214 10.7426 2.25736C11.8679 3.38258 12.5 4.9087 12.5 6.5C12.5 8.0913 11.8679 9.61742 10.7426 10.7426C9.61742 11.8679 8.0913 12.5 6.5 12.5C4.9087 12.5 3.38258 11.8679 2.25736 10.7426C1.13214 9.61742 0.5 8.0913 0.5 6.5C0.5 4.9087 1.13214 3.38258 2.25736 2.25736C3.38258 1.13214 4.9087 0.5 6.5 0.5ZM5.9375 3.3125V6.5C5.9375 6.6875 6.03125 6.86328 6.18828 6.96875L8.43828 8.46875C8.69609 8.64219 9.04531 8.57187 9.21875 8.31172C9.39219 8.05156 9.32187 7.70469 9.06172 7.53125L7.0625 6.2V3.3125C7.0625 3.00078 6.81172 2.75 6.5 2.75C6.18828 2.75 5.9375 3.00078 5.9375 3.3125Z" fill="white"/>
                 </svg>
-                <span class="text-base text-white">18 Juli 2023</span>
+                <span id="latest_date" class="text-base text-white">-</span>
               </div>
             </div>
           </div>
@@ -550,6 +551,7 @@
     </div>
     <!-- begin::Dashboard -->
     
+    <script src="../assets/js/main-dashboard.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/auth-check.js"></script>
