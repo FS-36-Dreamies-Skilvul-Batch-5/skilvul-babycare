@@ -10,15 +10,61 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Open+Sans:wght@500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Open+Sans:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Style -->
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1>Login</h1>
+  <div class="
+    bg-[url('/assets/images/blue-background.webp')] 
+    bg-no-repeat bg-center bg-cover 
+    w-full h-auto lg:h-screen 
+    flex justify-center items-center 
+    px-4 py-20"
+  >
+    <div class="flex flex-col lg:flex-row justify-center gap-x-10 gap-y-4 bg-white w-full max-w-[1064px] h-auto rounded-[24px] md:rounded-[40px] p-[24px] md:p-[32px] lg:p-[40px] select-none">
+      <!-- Left -->
+      <div class="w-full lg:w-auto flex-auto lg:flex-1 flex justify-start lg:justify-center items-center self-center">
+        <img src="assets/images/mother-baby.webp" class="aspect-square w-[360px] lg:w-full" alt="Mother and Baby">
+      </div>
 
-  <script src="script.js"></script>
+      <!-- Right -->
+      <form id="login_form" class="flex-1 flex flex-col justify-center items-start gap-y-[30px] self-stretch">
+        <div class="-ml-1">
+          <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans -mb-2">Hello 👋</h1>
+          <h1 class="text-[36px] md:text-[42px] font-extrabold font-opensans">Welcome Back!</h1>
+
+          <span id="error_msg" class="hidden absolute text-red-500 text-sm ml-1">Username atau Password salah!</span>
+        </div>
+
+        <div class="w-full flex flex-col gap-y-[20px]">
+          <input id="username_field" type="text" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" name="username" placeholder="Username or email" pattern="[a-z]+" required>
+          <input id="password_field" type="password" class="w-full px-[10px] py-[14px] focus:outline-none border-b border-[#BDCAE6] text-[#474F7C] placeholder:text-[#BDCAE6]" name="password" placeholder="Password" required>
+        </div>
+
+        <div class="w-full flex flex-col gap-y-[12px] mt-1">
+          <div class="flex justify-between">
+            <div class="flex gap-x-[10px] items-center">
+              <input type="checkbox" name="remember_me" id="remember_me" class="scale-[1.2] ml-0.5 cursor-pointer text-sm md:text-base">
+              <label for="remember_me" class="text-[#474F7C] text-sm md:text-base cursor-pointer">Ingat saya</label>
+            </div>
+            <a href="#" class="text-[#474F7C] text-sm md:text-base">Lupa kata sandi?</a>
+          </div>
+          <button type="submit" class="bg-[#1E3465] text-white text-base font-semibold rounded-md py-3">
+            Login
+          </button>
+          <div class="text-center mt-3">
+            <span class="text-[#474F7C] text-sm md:text-base">Belum punya akun?
+              <a href="signup.html" class="font-semibold">Klik disini</a>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./assets/js/login.js"></script>
 </body>
 </html>

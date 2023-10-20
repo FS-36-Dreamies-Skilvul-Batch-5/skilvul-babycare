@@ -16,8 +16,397 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Landing</h1>
+<body class="bg-[#F9FBFD] overflow-x-hidden">
+  <!-- Open Tag Header -->
+  <header class="absolute w-full bg-[#272C49]">
+    <div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex justify-between items-center py-3.5">
+      <div class="shrink-0">
+        <img src="assets/icons/baby-care-logo.png" alt="Baby Care Logo" class="w-40 md:w-44 lg:w-48">
+      </div>
+
+      <!-- Desktop -->
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-x-10">
+          <li><a href="#" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+          <li><a href="#features" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+          <li><a href="articles.html" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+          <li><a href="#reviews" class="text-white hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <div class="hidden lg:block">
+        <a href="signup.html" class="signup_link flex justify-center items-center gap-x-2 bg-[#FFCB40] py-3 px-8 rounded-lg">
+          <span class="text-[#B05F00] font-semibold">Get Started</span>  
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0L9.72023 0.00384421C4.32942 0.152163 0 4.57356 0 10C0 15.51 4.48 20 10 20C15.51 20 20 15.51 20 10C20 4.48 15.51 0 10 0ZM8.02 6C8.32 5.7 8.79 5.7 9.08 6L12.57 9.47C12.71 9.61 12.79 9.8 12.79 10C12.79 10.2 12.71 10.39 12.57 10.53L9.08 14C8.94 14.15 8.75 14.22 8.56 14.22C8.36 14.22 8.17 14.15 8.02 14C7.73 13.7 7.73 13.23 8.03 12.94L10.98 10L8.03 7.06C7.73 6.77 7.73 6.29 8.02 6Z" fill="#B05F00"/>
+          </svg>
+        </a>
+        <a href="dashboard/index.html" class="dashboard_link hidden justify-center items-center gap-x-2 bg-[#FFCB40] py-3 px-8 rounded-lg">
+          <span class="text-[#B05F00] font-semibold">Dashboard</span>  
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0L9.72023 0.00384421C4.32942 0.152163 0 4.57356 0 10C0 15.51 4.48 20 10 20C15.51 20 20 15.51 20 10C20 4.48 15.51 0 10 0ZM8.02 6C8.32 5.7 8.79 5.7 9.08 6L12.57 9.47C12.71 9.61 12.79 9.8 12.79 10C12.79 10.2 12.71 10.39 12.57 10.53L9.08 14C8.94 14.15 8.75 14.22 8.56 14.22C8.36 14.22 8.17 14.15 8.02 14C7.73 13.7 7.73 13.23 8.03 12.94L10.98 10L8.03 7.06C7.73 6.77 7.73 6.29 8.02 6Z" fill="#B05F00"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile -->
+      <div class="block lg:hidden" id="open_modal_btn">
+        <svg 
+          class="fill-white text-[26px] cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+        </svg>
+      </div>
+
+      <!-- Mobile Modal -->
+      <div class="mobile_modal translate-y-[100%] fixed top-0 left-0 w-full h-screen bg-[#272C49] px-4 flex justify-center items-center duration-500 ease-in-out z-[999]">
+        <div class="w-full">
+          <nav>
+            <ul class="flex flex-col justify-center items-center gap-y-6">
+              <li><a href="#" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+              <li><a href="#features" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+              <li><a href="articles.html" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+              <li><a href="#reviews" class="text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+              <span class="w-[120px] border-t-2 border-[#FFCB40]"></span>
+              <li><a href="signup.html" class="signup_link text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Get Started</a></li>
+              <li><a href="dashboard/index.html" class="dashboard_link text-xl text-white hover:text-[#FFCB40] duration-300 ease-in-out">Dashboard</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="absolute top-6 right-6" id="close_modal_btn">
+          <svg
+            class="fill-white text-[26px] cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Close Tag Header -->
+
+  <!-- Open Tag Content -->
+  <section class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12" id="landing">
+    <main class="flex flex-col lg:flex-row h-auto min-[400px]:h-screen pt-[120px] pb-[70px] lg:pt-[70px] lg:pb-[0px] gap-y-8">
+      <div class="lg:flex-1 flex flex-col justify-center items-start gap-y-1">
+        <div class="w-full">
+          <div class="text-center lg:text-start">
+            <span class="font-opensans text-[#272C49] font-extrabold text-[38px] lg:text-[42px] lh__1">
+              Monitoring Baby’s
+            </span>
+            <br>
+            <span class="inline-block font-opensans text-[#272C49] font-extrabold text-[38px] lg:text-[42px] -mt-1 ">
+              Nutrition using
+            </span>
+          </div>
+          <div class="text-center lg:text-start -mt-4">
+            <span class="font-aoboshi text-[#272C49] font-bold text-[38px] lg:text-[42px]">Baby</span>
+            <span class="font-aoboshi text-[#FFCB40] font-bold text-[38px] lg:text-[42px]">Care</span>
+          </div>
+        </div>
+        <p class="text-[#36455B] text-base lg:text-lg text-center lg:text-start w-full max-w-[500px] lg:w-auto mx-auto lg:mx-0">Bergabung bersama kami dan mulailah perjalanan menuju optimalisasi nutrisi & gizi anak</p>
+      </div>
+      <div class="lg:flex-1 flex justify-center items-center">
+        <img src="assets/images/mother-baby-circle.webp" alt="Mother & Baby" class="w-full max-w-[300px] lg:max-w-[500px] h-auto aspect-square object-contain rounded-full">
+      </div>
+    </main>
+  </section>
+
+  <section class="relative w-full bg-white" id="features">
+    <div class="absolute top-0 right-0 z-10">
+      <svg class="absolute top-0 right-0 z-10 w-[140px] md:w-[180px] lg:w-[308px] h-auto aspect-[308/274]" xmlns="http://www.w3.org/2000/svg" width="308" height="274" viewBox="0 0 308 274" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M215.03 -26.0188C241.164 -31.8405 265.52 -43.8127 292.547 -42.9564C324.503 -41.9439 369.961 -44.9138 383.457 -20.6824C398.746 6.76903 351.421 35.0325 352.834 65.2893C353.896 88.0281 397.13 102.985 390.261 125.005C383.294 147.338 344.797 149.678 322.325 163.091C305.597 173.076 287.174 180.949 274.205 194.278C250.436 218.706 251.779 266.432 215.03 273.362C182.768 279.446 162.607 240.546 141.427 219.316C125.25 203.1 126.135 177.041 106.104 164.178C77.0836 145.544 23.4886 158.013 4.91495 131.659C-11.1239 108.902 16.0305 79.9562 30.0701 56.2938C42.415 35.4879 58.2756 15.326 81.5025 2.57901C102.886 -9.15609 130.368 -7.04211 155.148 -12.3493C175.446 -16.6967 194.782 -21.5084 215.03 -26.0188Z" fill="#272C49"/>
+      </svg>
+      <svg class="absolute top-8 right-0 z-10 w-[40px] md:w-[60px] lg:w-[112px] h-auto aspect-[112/187]" xmlns="http://www.w3.org/2000/svg" width="112" height="187" viewBox="0 0 112 187" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M84.8212 25.9733C104.694 28.0837 123.597 9.89055 142.381 16.177C162.501 22.9103 181.466 39.6791 183.851 59.1153C186.221 78.4294 159.686 90.2574 153.763 108.925C147.484 128.714 163.199 153.068 148.967 169.058C134.555 185.25 107.548 188.612 84.8212 186.381C63.2857 184.268 45.7216 170.951 29.9731 157.379C15.9469 145.292 3.1342 130.96 0.300303 113.545C-2.32236 97.4284 13.0305 84.0467 15.412 67.8989C18.6626 45.8581 -3.69079 15.0967 16.6298 2.82234C37.361 -9.70009 60.1272 23.3508 84.8212 25.9733Z" fill="#FFCB40"/>
+      </svg>
+    </div>
+
+    <div class="relative w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 z-20">
+      <div class="flex flex-col justify-center items-center py-20 gap-y-16">
+        <div class="flex flex-col justify-center text-center gap-y-2.5">
+          <h1 class="font-opensans text-[32px] text-[#272C49] font-extrabold">Our Features</h1>
+          <p class="text-[#36455B]">Berikut fitur-fitur yang dapat ibu gunakan dalam memantau pertumbuhan anak</p>
+        </div>
+        <div class="w-full max-w-[900px] grid grid-col-1 md:grid-cols-2 gap-[48px]">
+          <div class="flex flex-col justify-center items-center gap-y-3">
+            <img src="assets/icons/data-anak.png" alt="Data Anak" class="w-[60px] md:w-[70px] aspect-[70/80]">
+            <div class="text-center">
+              <h3 class="text-[20px] md:text-[22px] text-[#272C49] font-bold">Data Anak</h3>
+              <p class="max-w-[330px] text-sm text-[#36455B] mt-0.5">Fitur Data Anak akan menampilkan kumpulan data pertumbuhan</p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-y-3">
+            <img src="assets/icons/nutrisi-anak.png" alt="Nutrisi Anak" class="w-[70px] md:w-[80px] aspect-[80/80]">
+            <div class="text-center">
+              <h3 class="text-[20px] md:text-[22px] text-[#272C49] font-bold">Nutrisi Anak</h3>
+              <p class="max-w-[330px] text-sm text-[#36455B] mt-0.5">Nutrisi Anak berisi akan menampilkan Indeks Pertumbuhan anak</p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-y-3">
+            <img src="assets/icons/imunisasi.png" alt="Imunisasi" class="w-[70px] md:w-[80px] aspect-[80/80]">
+            <div class="text-center">
+              <h3 class="text-[20px] md:text-[22px] text-[#272C49] font-bold">Imunisasi</h3>
+              <p class="max-w-[330px] text-sm text-[#36455B] mt-0.5">Fitur Imunisasi berisi jadwal Imunisasi yang diperlukan bagi anak</p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center gap-y-3">
+            <img src="assets/icons/grafik-pertumbuhan.png" alt="Grafik Pertumbuhan" class="w-[70px] md:w-[80px] aspect-[80/80]">
+            <div class="text-center">
+              <h3 class="text-[20px] md:text-[22px] text-[#272C49] font-bold">Grafik Pertumbuhan</h3>
+              <p class="max-w-[330px] text-sm text-[#36455B] mt-0.5">Grafik Pertumbuhan berisi Status Gizi anak dengan Pengukuran nilai Z-Score</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 z-10">
+      <svg class="absolute bottom-0 left-0 w-[120px] md:w-[140px] lg:w-[222px] h-auto aspect-[222/259]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 259" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M219.538 198.355C207.366 238.077 158.272 247.951 120.447 261.957C86.3341 274.588 51.6696 282.491 17.3552 273.218C-22.0097 262.579 -65.347 246.677 -80.54 207.638C-95.7297 168.607 -78.278 122.667 -55.3569 86.3812C-36.16 55.991 -1.32195 45.9698 30.665 31.5909C62.4873 17.2859 95.6853 -9.03736 126.817 4.48969C157.758 17.9341 157.29 61.925 172.195 93.0879C189.431 129.125 231.596 159.006 219.538 198.355Z" fill="#FFCB40"/>
+      </svg>
+      <svg class="absolute bottom-0 left-4 w-[100px] md:w-[120px] lg:w-[200px] h-auto aspect-[200/133]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 133" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M150.426 18.8361C172.099 32.9361 185.781 55.058 192.935 78.9137C200.114 102.855 204.684 130.557 189.514 149.185C175.158 166.814 146.736 161.528 123.141 164.616C102.676 167.294 82.9641 173.223 63.0827 165.728C38.4966 156.46 11.2935 143.381 2.98687 119.321C-5.47675 94.806 10.2507 71.4532 23.237 50.3152C35.982 29.5699 50.4054 8.24194 74.9632 2.16391C100.137 -4.06662 127.794 4.11214 150.426 18.8361Z" fill="#272C49"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12" id="articles">
+    <div class="flex flex-col py-[70px] py-20 gap-y-12 lg:gap-y-16">
+      <div class="flex flex-col text-start gap-y-2.5">
+        <h1 class="font-opensans text-[32px] text-[#272C49] font-extrabold">Top Articles</h1>
+        <p class="text-[#36455B]">Jelajahi artikel kami tentang Panduan Nutrisi dan Proses Pertumbuhan Anak</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row justify-between gap-x-10 gap-y-10">
+        <div class="w-full lg:min-w-[580px] lg:max-w-[696px] flex flex-col gap-y-5">
+          <a href="#">
+            <div>
+              <img src="assets/images/lima-kebiasaan-bayi-baru-lahir.webp" alt="5 Kebiasaan Bayi baru Lahir" class="w-full h-[310px] rounded-xl object-cover">
+            </div>
+          </a>
+          <div>
+            <span class="text-[#898989]">posted on 2 Januari 2023</span>
+            <a href="#">
+              <h1 class="font-opensans text-[22px] md:text-[24px] text-[#272C49] font-bold line-clamp-2 mb-2 lh__2">5 Kebiasaan Bayi Baru Lahir yang Harus Diketahui oleh Ibunda</h1>
+            </a>
+            <p class="text-[#36455B] line-clamp-2">Untuk lebih jelasnya, simak kebiasaan bayi dari usia 0 hingga 6 bulan seperti di bawah ini, termasuk gejala, cara mengatasi, hingga tanda-tanda yang harus dicek dan dilihat pada bayi yang baru lahir</p>
+          </div>
+        </div>
+
+        <div class="w-full lg:max-w-[480px] flex flex-col justify-between gap-y-5">
+          <div class="flex gap-x-5">
+            <a href="#">
+              <div class="shrink-0 w-[128px] lg:w-[140px] h-[128px] lg:h-[140px]">
+                <img src="assets/images/cara-merawat-bayi.webp" alt="5 Ide Stimulasi Sensori Latih Kemandirian" class="w-full aspect-square object-cover rounded-xl">
+              </div>
+            </a>
+            <div class="flex flex-col lg:justify-between gap-y-2">
+              <div>
+                <span class="text-[#898989] text-sm">2 Januari 2023</span>
+                <a href="#">
+                  <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold line-clamp-2 lh__2 -mt-0.5">Cara Merawat Bayi yang Baik dan Benar</h1>
+                </a>
+              </div>
+              <div class="flex gap-x-2">
+                <a href="#" class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md">
+                  Tips
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-x-5">
+            <a href="#">
+              <div class="shrink-0 w-[128px] lg:w-[140px] h-[128px] lg:h-[140px]">
+                <img src="assets/images/lima-ide-stimulasi.webp" alt="5 Ide Stimulasi Sensori Latih Kemandirian" class="w-full aspect-square object-cover rounded-xl">
+              </div>
+            </a>
+            <div class="flex flex-col lg:justify-between gap-y-2">
+              <div>
+                <span class="text-[#898989] text-sm">13 Agustus 2023</span>
+                <a href="#">
+                  <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold line-clamp-2 lh__2 -mt-0.5">5 Ide Stimulasi Sensori Latih Kemandirian</h1>
+                </a>
+              </div>
+              <div class="flex gap-x-2">
+                <a href="#" class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md">
+                  Stimulasi
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-x-5">
+            <a href="#">
+              <div class="shrink-0 w-[128px] lg:w-[140px] h-[128px] lg:h-[140px]">
+                <img src="assets/images/pentingnya-imunisasi.webp" alt="Pentingnya Imunisasi Bagi Anak" class="w-full aspect-square object-cover rounded-xl">
+              </div>
+            </a>
+            <div class="flex flex-col lg:justify-between gap-y-2">
+              <div>
+                <span class="text-[#898989] text-sm">2 Januari 2023</span>
+                <a href="#">
+                  <h1 class="font-opensans text-[20px] md:text-[22px] text-[#272C49] font-bold line-clamp-2 lh__2 -mt-0.5">Pentingnya Imunisasi Bagi Anak</h1>
+                </a>
+              </div>
+              <div class="flex gap-x-2">
+                <a href="#" class="font-semibold text-[14px] text-[#B05F00] bg-[#F8D16D] py-[6px] px-[10px] rounded-md">
+                  Imunisasi
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative w-full bg-white" id="reviews">
+    <div class="relative w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 z-20">
+      <div class="flex flex-col justify-center items-center py-20 gap-y-16">
+        <div class="flex flex-col justify-center text-center gap-y-2.5">
+          <h1 class="font-opensans text-[32px] text-[#272C49] font-extrabold">User Review</h1>
+          <p class="text-[#36455B]">Orang Tua Sejati, Hasil Nyata: Dengarkan Kisah Sukses Mereka.</p>
+        </div>
+        
+        <div class="w-full flex flex-row gap-x-14 overflow-x-scroll scrollbar__hidden px-2 py-3">
+          <div class="shrink-0 flex flex-col w-[300px] min-[420px]:w-[350px] p-[30px] bg-white rounded-lg gap-y-6 shadow-[2px_2px_10px_0px_rgba(0,0,0,0.1)]">
+            <div class="shrink-0 w-[85px] h-[85px]">
+              <img src="assets/images/users/sarah-m.png" alt="Sarah. M" class="w-full aspect-square object-cover rounded-full">
+            </div>
+            <div>
+              <p class="text-[#36455B] text-sm md:text-base h-[80px] md:h-[100px] line-clamp-4">"Saya sangat berterima kasih kepada Babycare! Ini merupakan terobosan baru bagi para ibu. Sangat direkomendasikan!"</p>
+            </div>
+            <div class="flex justify-between items-center pt-[14px] pb-[10px] border-t-2 border-[rgba(124, 139, 157, 0.8)]">
+              <h2 class="font-opensans font-bold md:text-lg text-[#36455B]">Sarah. M</h2>
+              <div class="flex justify-end gap-x-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#D1D9E2"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="shrink-0 flex flex-col w-[300px] min-[420px]:w-[350px] p-[30px] bg-white rounded-lg gap-y-6 shadow-[2px_2px_10px_0px_rgba(0,0,0,0.1)]">
+            <div class="shrink-0 w-[85px] h-[85px]">
+              <img src="assets/images/users/nanda-a.png" alt="Nanda. A" class="w-full aspect-square object-cover rounded-full">
+            </div>
+            <div>
+              <p class="text-[#36455B] text-sm md:text-base h-[80px] md:h-[100px] line-clamp-4">“Babycare sangat membantu para ibu dalam melihat grafik tumbuh kembang anak, banyak juga artikel bermanfaat untuk para orang tua”</p>
+            </div>
+            <div class="flex justify-between items-center pt-[14px] pb-[10px] border-t-2 border-[rgba(124, 139, 157, 0.8)]">
+              <h2 class="font-opensans font-bold md:text-lg text-[#36455B]">Nanda. A</h2>
+              <div class="flex justify-end gap-x-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="shrink-0 flex flex-col w-[300px] min-[420px]:w-[350px] p-[30px] bg-white rounded-lg gap-y-6 shadow-[2px_2px_10px_0px_rgba(0,0,0,0.1)]">
+            <div class="shrink-0 w-[85px] h-[85px]">
+              <img src="assets/images/users/brenda-s.png" alt="Brenda. S" class="w-full aspect-square object-cover rounded-full">
+            </div>
+            <div>
+              <p class="text-[#36455B] text-sm md:text-base h-[80px] md:h-[100px] line-clamp-4">“Saya menghargai bagaimana situs ini memberikan tips praktis untuk membantu anak-anak tumbuh dan berkembang.”</p>
+            </div>
+            <div class="flex justify-between items-center pt-[14px] pb-[10px] border-t-2 border-[rgba(124, 139, 157, 0.8)]">
+              <h2 class="font-opensans font-bold md:text-lg text-[#36455B]">Brenda. S</h2>
+              <div class="flex justify-end gap-x-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#F8D16D"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M8.4428 1.05182L9.54384 3.37565C9.72431 3.75607 10.0727 4.01972 10.4759 4.08079L12.9383 4.45348C13.9535 4.60709 14.3589 5.90631 13.6242 6.65213L11.8419 8.46071C11.5502 8.75688 11.4171 9.18361 11.4859 9.60183L11.9065 12.1559C12.0801 13.2089 11.0187 14.0118 10.1109 13.5148L7.90849 12.3096C7.54791 12.1121 7.11705 12.1121 6.75643 12.3096L4.554 13.5156C3.64625 14.0126 2.58481 13.2088 2.75841 12.1567L3.17899 9.60262C3.24815 9.18418 3.11493 8.75712 2.82305 8.46072L1.0412 6.65193C0.306493 5.9061 0.711918 4.60689 1.72711 4.45328L4.18945 4.08059C4.59264 4.01951 4.94107 3.75583 5.12153 3.37544L6.22213 1.05185C6.67667 0.0934136 7.98829 0.0933814 8.4428 1.05182Z" fill="#D1D9E2"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Close Tag Content -->
+
+  <!-- Open Tag Footer -->
+  <footer class="w-full bg-[#272C49]">
+    <div class="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex flex-col justify-between items-center py-10 lg:py-14 gap-y-10">
+      <div class="w-full flex flex-col gap-y-5">
+        <div class="order-1">
+          <img src="assets/icons/baby-care-logo.png" alt="Baby Care Logo" class="w-40 md:w-44 lg:w-48">
+        </div>
+        <div class="order-2 flex flex-col -mt-3">
+          <span class="text-sm lg:text-base text-white">Alamat: 123 Sprout Street, Nurtureville, Babyland, Nutritionia, 12345, NourishVille</span>
+          <span class="text-sm lg:text-base text-white">Nomor Telepon: (555) 123-4567</span>
+          <span class="text-sm lg:text-base text-white">Kode Pos: 67890</span>
+        </div>
+        <div class="order-4 lg:order-3 flex justify-start lg:justify-end items-center gap-x-6">
+          <a href="#">
+            <img src="assets/icons/facebook.png" alt="Facebook" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/instagram.png" alt="Instagram" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/twitter.png" alt="Twitter" class="w-[28px] lg:w-[35px]">
+          </a>
+          <a href="#">
+            <img src="assets/icons/youtube.png" alt="Youtube" class="w-[28px] lg:w-[35px]">
+          </a>
+        </div>
+        <nav class="order-3 lg:order-4">
+          <ul class="flex flex-col lg:flex-row items-start lg:items-center gap-y-3 gap-x-10">
+            <li><a href="#" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Home</a></li>
+            <li><a href="#features" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Features</a></li>
+            <li><a href="articles.html" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Articles</a></li>
+            <li><a href="#reviews" class="text-white text-sm lg:text-base hover:text-[#FFCB40] duration-300 ease-in-out">Reviews</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="w-full pt-4 border-t border-[#D1D9E2]">
+        <span class="text-[12px] lg:text-sm text-white">© Copyright 2023 • babycare.com</span>
+      </div>
+    </div>
+  </footer>
+  <!-- Close Tag Footer -->
 
   <script src="script.js"></script>
 </body>
