@@ -424,9 +424,9 @@ function convertHumanReadDateFormat(dateString) {
   }
 }
 
-// Dummy Baby Age
-const babyAge = calculateBabyAgeInMonths("10-08-2023");
-const babyGender = "male";
+// Take data from local storage
+const babyAge = calculateBabyAgeInMonths(localStorage.getItem('baby_birth'));
+const babyGender = localStorage.getItem('gender');
 
 function getNutritionStatus(props) {
   const {
