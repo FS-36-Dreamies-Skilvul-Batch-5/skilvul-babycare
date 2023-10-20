@@ -1484,6 +1484,10 @@ function calculateBabyAgeInMonths(birthDate) {
 
   const ageInMilliseconds = currentDate - babyBirthDate;
 
+  console.log(currentDate)
+  console.log(babyBirthDate)
+  console.log(ageInMilliseconds)
+
   const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.44;
   const ageInMonths = ageInMilliseconds / millisecondsInMonth;
 
